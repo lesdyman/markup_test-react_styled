@@ -4,13 +4,18 @@ export const StyledHeader = styled.header`
   display: flex;
   position: relative;
   padding: 0 130px;
-  box-shadow: 0px 12px 12px 0px rgba(0, 0, 0, 0.06);
   justify-content: space-between;
-  background-color: #FFF;
+  background-color: #fff;
+  width: 100vw;
+  box-shadow: 0px 12px 12px 0px rgba(0, 0, 0, 0.06);
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 0 80px;
+  }
 `;
 
 export const Logo = styled.div`
-
   img {
     height: 23px;
     width: 50px;
@@ -37,24 +42,24 @@ export const UserControlPanel = styled.div`
   }
 `;
 
-interface UserPanelButtonProps {
-  imagePath: string;
-  width?: string;
-  height?: string;
-}
-
 export const UserPanelButtonsBlock = styled.div`
   display: flex;
   margin-left: 17px;
 `;
 
-export const UserPanelButton = styled.div<UserPanelButtonProps>`
-  height: ${(props) => props.height || '32px'};
-  width: ${(props) => props.width || '32px'};
-  background-image: url(${(props) => props.imagePath});
-  /* background-image: url('src/assets/medium.svg'); */
-  background-size: 100%;
-  background-repeat: no-repeat;
+interface UserPanelButtonProps {
+  width?: string;
+  height?: string;
+}
+
+export const UserPanelButton = styled.button<UserPanelButtonProps>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  height: ${(props) => props.height || "32px"};
+  width: ${(props) => props.width || "32px"};
+  background-color: #fff;
   cursor: pointer;
 `;
 

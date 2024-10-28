@@ -8,6 +8,10 @@ import {
   UserPanelButtonsBlock,
 } from "./styled/Header.styled";
 import { Navigation } from "../Navigation/Navigation";
+import { BellIcon } from "../Icons/bell";
+import { SharedRecapIcon } from "../Icons/shared";
+import { MediumIcon } from "../Icons/medium";
+import { ArrowDown } from "../Icons/arrow";
 
 export const Header = () => {
   const [activeNav, setActiveNav] = useState<string>("feed");
@@ -24,15 +28,21 @@ export const Header = () => {
       <UserControlPanel>
         <span>Arthur Wood</span>
         <img src="src/assets/avatar.png" alt="User Avatar" />
-        <UserPanelButton
-          width="16px"
-          height="16px"
-          imagePath="src/assets/a_icon_arrow.svg"
-        />
+        <UserPanelButton width="16px" height="16px">
+          <ArrowDown />
+        </UserPanelButton>
         <UserPanelButtonsBlock>
-          <UserPanelButton imagePath="/src/assets/notifications.svg" />
-          <UserPanelButton imagePath="src/assets/share-recap.svg" />
-          <UserPanelButton imagePath="src/assets/medium.svg" />
+          <UserPanelButton>
+            <BellIcon />
+          </UserPanelButton>
+
+          <UserPanelButton>
+            <SharedRecapIcon />
+          </UserPanelButton>
+
+          <UserPanelButton>
+            <MediumIcon />
+          </UserPanelButton>
         </UserPanelButtonsBlock>
       </UserControlPanel>
       <FloatingButton>+</FloatingButton>

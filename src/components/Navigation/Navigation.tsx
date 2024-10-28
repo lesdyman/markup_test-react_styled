@@ -11,27 +11,35 @@ export const Navigation: React.FC<NavigationProps> = ({
 }) => {
   return (
     <StyledNavigation>
-      <a
-        href="#"
-        onClick={() => setActiveNav("feed")}
-        className={activeNav === "feed" ? "active" : ""}
-      >
-        feed
-      </a>
-      <a
-        href="#"
-        onClick={() => setActiveNav("explore")}
-        className={activeNav === "explore" ? "active" : ""}
-      >
-        explore
-      </a>
-      <a
-        href="#"
-        onClick={() => setActiveNav("discussions")}
-        className={activeNav === "discussions" ? "active" : ""}
-      >
-        discussions
-      </a>
+      <ul>
+        <li>
+          <a
+            href="#"
+            onClick={() => setActiveNav("feed")}
+            className={activeNav === "feed" ? "active" : ""}
+          >
+            feed
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            onClick={() => setActiveNav("explore")}
+            className={activeNav === "explore" ? "active" : ""}
+          >
+            explore
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            onClick={() => setActiveNav("discussions")}
+            className={activeNav === "discussions" ? "active" : ""}
+          >
+            discussions
+          </a>
+        </li>
+      </ul>
     </StyledNavigation>
   );
 };

@@ -1,3 +1,6 @@
+import { LikeIcon } from "../Icons/hearts";
+import { SharedLinkIcon } from "../Icons/shared-link";
+import { ViewedIcon } from "../Icons/viewed";
 import { StyledCard } from "./styled/Card.styled";
 
 interface CardStyle {
@@ -16,7 +19,7 @@ export const Card: React.FC<CardStyle> = ({ bottomStyle, topStyle }) => {
           </div>
         ) : (
           <div className="card-top">
-            <img src="src/assets/icon_link copy.svg" alt="link icon" />
+            <SharedLinkIcon />
             <span>Shared via weblink</span>
           </div>
         ))}
@@ -37,11 +40,11 @@ export const Card: React.FC<CardStyle> = ({ bottomStyle, topStyle }) => {
         ) : (
           <div className="stat-wrapper">
             <div className="stat-item">
-              <img src="src/assets/icon_view.svg" alt="view icon" />
+              <ViewedIcon />
               <span>88</span>
             </div>
             <div className="stat-item">
-              <img src="src/assets/icon_like.svg" alt="heart icon" />
+              <LikeIcon />
               <span>24</span>
             </div>
           </div>

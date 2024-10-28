@@ -13,9 +13,11 @@ export const InfoTop = styled.div`
   gap: 25px;
   margin-bottom: 8px;
 `;
+
 interface InfoAvatarProps {
   imagePath: string;
 }
+
 export const InfoAvatar = styled.div<InfoAvatarProps>`
   height: 120px;
   width: 120px;
@@ -49,6 +51,7 @@ export const EditButton = styled.div`
   gap: 8px;
   align-items: center;
   margin-top: 8px;
+
   img {
     height: 20px;
     width: 20px;
@@ -60,8 +63,10 @@ export const EditButton = styled.div`
   }
 `;
 
-export const DottedMenu = styled.div`
+export const DottedMenu = styled.button`
   display: flex;
+  border: none;
+  background-color: rgba(236, 241, 248, 0);
   align-items: center;
   justify-content: center;
   height: 24px;
@@ -78,7 +83,6 @@ export const ContextMenu = styled.div<{ isVisible: boolean }>`
   padding: 24px 0;
   background-color: #fff;
   border-radius: 8px;
-  right: 10px;
   right: -145px;
   top: 28px;
   opacity: ${(props) => (props.isVisible ? 0.94 : 0)};
@@ -87,6 +91,10 @@ export const ContextMenu = styled.div<{ isVisible: boolean }>`
   transition: opacity 0.8s ease, transform 0.8s ease;
   backdrop-filter: blur(21.75px);
   box-shadow: 0 24 24 0 #0000001f;
+
+  @media (max-width: 480px) {
+    right: 0px;
+  }
 `;
 
 export const ContextMenuLine = styled.div`
@@ -117,6 +125,7 @@ export const FollowersStat = styled.div`
 
 export const StatItem = styled.div`
   text-align: center;
+
   div {
     font-size: 18px;
     font-weight: 700;

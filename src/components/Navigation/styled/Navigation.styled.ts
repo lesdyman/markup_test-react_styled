@@ -1,10 +1,19 @@
 import styled from "styled-components";
 
 export const StyledNavigation = styled.nav`
-  display: flex;
-  gap: 36px;
   margin-top: 23px;
   min-width: 261px;
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 36px;
+  }
+
+  li {
+    display: flex;
+    height: 42px;
+  }
 
   a {
     text-decoration: none;
@@ -15,6 +24,7 @@ export const StyledNavigation = styled.nav`
     line-height: 42px;
     box-sizing: border-box;
     transition: opacity 0.5s ease;
+    height: 100%;
 
     &.active {
       opacity: 1;

@@ -12,6 +12,7 @@ import {
   ContextMenu,
   ContextMenuLine,
 } from "./styled/Info.styled";
+import { DotsIcon } from "../Icons/3dots";
 
 export const Info = () => {
   const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
@@ -29,7 +30,7 @@ export const Info = () => {
           </EditButton>
         </InfoTopText>
         <DottedMenu onClick={() => setMenuIsOpen(!menuIsOpen)}>
-          <img src="src/assets/icon_3_dots_menu.svg" alt="more menu" />
+          <DotsIcon />
         </DottedMenu>
         {menuIsOpen && (
           <ContextMenu isVisible={menuIsOpen}>
