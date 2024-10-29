@@ -108,7 +108,7 @@ export const ContextMenuLine = styled.div`
     backdrop-filter: blur(54.36px);
   }
 
-  img {
+  .context_menu-icon {
     width: 20px;
     height: 20px;
     margin: 0 24px 0 16px;

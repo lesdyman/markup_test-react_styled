@@ -39,12 +39,16 @@ export const Info = () => {
         {menuIsOpen && (
           <ContextMenu isVisible={menuIsOpen}>
             <ContextMenuLine>
-              <ReportIcon />
+              <div className="context_menu-icon">
+                <ReportIcon />
+              </div>
               <span>Report User</span>
             </ContextMenuLine>
 
             <ContextMenuLine>
-              <BlockIcon />
+              <div className="context_menu-icon">
+                <BlockIcon />
+              </div>
               <span>Block User</span>
             </ContextMenuLine>
           </ContextMenu>
