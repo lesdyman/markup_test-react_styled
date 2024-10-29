@@ -7,8 +7,10 @@
 ## Click [HERE](https://lesdyman.github.io/markup_test-react_styled/#) to open demo page deployed on GH Pages.
 
 # To start
-- clone repo: 
-``` git clone https://github.com/lesdyman/markup_test-react_styled.git
+- clone repo:
+```
+git clone https://github.com/lesdyman/markup_test-react_styled.git
+
 ```
 
 - install dependencies:
