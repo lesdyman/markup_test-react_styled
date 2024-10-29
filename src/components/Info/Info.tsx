@@ -13,6 +13,8 @@ import {
   ContextMenuLine,
 } from "./styled/Info.styled";
 import { DotsIcon } from "../Icons/3dots";
+import infoAvatar from '../../assets/infoAvatar.png';
+import { EditIcon } from "../Icons/edit";
 
 export const Info = () => {
   const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
@@ -20,12 +22,12 @@ export const Info = () => {
   return (
     <StyledInfo>
       <InfoTop>
-        <InfoAvatar imagePath="src/assets/infoAvatar.png" />
+        <InfoAvatar imagePath={infoAvatar} />
         <InfoTopText>
           <span className="title">Benjamin Clementine</span>
           <span className="alias">@benclementine</span>
           <EditButton>
-            <img src="src/assets/edit_icon.svg" alt="Edit icon" />
+            <EditIcon />
             <a href="#">Edit Profile</a>
           </EditButton>
         </InfoTopText>

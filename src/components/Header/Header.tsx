@@ -12,6 +12,8 @@ import { BellIcon } from "../Icons/bell";
 import { SharedRecapIcon } from "../Icons/shared";
 import { MediumIcon } from "../Icons/medium";
 import { ArrowDown } from "../Icons/arrow";
+import { LogoIcon } from "../Icons/logo";
+import avatar from '../../assets/avatar.png';
 
 export const Header = () => {
   const [activeNav, setActiveNav] = useState<string>("feed");
@@ -19,7 +21,7 @@ export const Header = () => {
     <StyledHeader>
       <div style={{ marginTop: "24px" }}>
         <Logo>
-          <img src="src/assets/logo.svg" alt="logo" />
+          <LogoIcon />
         </Logo>
 
         <Navigation activeNav={activeNav} setActiveNav={setActiveNav} />
@@ -27,7 +29,7 @@ export const Header = () => {
 
       <UserControlPanel>
         <span>Arthur Wood</span>
-        <img src="src/assets/avatar.png" alt="User Avatar" />
+        <img src={avatar} alt="User Avatar" />
         <UserPanelButton width="16px" height="16px">
           <ArrowDown />
         </UserPanelButton>
