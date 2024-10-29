@@ -17,7 +17,7 @@ import infoAvatar from '../../assets/infoAvatar.png';
 import { EditIcon } from "../Icons/edit";
 
 import icon_report from '../../assets/icon_report.svg';
-import block from '../../assets/block.svg';
+import block from '../../assets/icon_block.svg';
 
 export const Info = () => {
   const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
