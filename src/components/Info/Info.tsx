@@ -16,6 +16,9 @@ import { DotsIcon } from "../Icons/3dots";
 import infoAvatar from '../../assets/infoAvatar.png';
 import { EditIcon } from "../Icons/edit";
 
+import icon_report from '../../assets/icon_report.svg';
+import block from '../../assets/block.svg';
+
 export const Info = () => {
   const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
 
@@ -37,12 +40,12 @@ export const Info = () => {
         {menuIsOpen && (
           <ContextMenu isVisible={menuIsOpen}>
             <ContextMenuLine>
-              <img src="/src/assets/icon_report.svg" alt="Report User icon" />
+              <img src={icon_report} alt="Report User icon" />
               <span>Report User</span>
             </ContextMenuLine>
 
             <ContextMenuLine>
-              <img src="/src/assets/icon_block.svg" alt="Block User icon" />
+              <img src={block} alt="Block User icon" />
               <span>Block User</span>
             </ContextMenuLine>
           </ContextMenu>
