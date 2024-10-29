@@ -13,11 +13,10 @@ import {
   ContextMenuLine,
 } from "./styled/Info.styled";
 import { DotsIcon } from "../Icons/3dots";
-import infoAvatar from '../../assets/infoAvatar.png';
+import infoAvatar from "../../assets/infoAvatar.png";
 import { EditIcon } from "../Icons/edit";
-
-import icon_report from '../../assets/icon_report.svg';
-import block from '../../assets/icon_block.svg';
+import { ReportIcon } from "../Icons/report";
+import { BlockIcon } from "../Icons/block";
 
 export const Info = () => {
   const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
@@ -40,12 +39,12 @@ export const Info = () => {
         {menuIsOpen && (
           <ContextMenu isVisible={menuIsOpen}>
             <ContextMenuLine>
-              <img src={icon_report} alt="Report User icon" />
+              <ReportIcon />
               <span>Report User</span>
             </ContextMenuLine>
 
             <ContextMenuLine>
-              <img src={block} alt="Block User icon" />
+              <BlockIcon />
               <span>Block User</span>
             </ContextMenuLine>
           </ContextMenu>
